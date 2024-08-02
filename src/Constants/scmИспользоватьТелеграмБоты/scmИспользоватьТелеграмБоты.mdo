@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="252c3755-8d0f-4da2-973f-d484ceb5e012">
+  <producedTypes>
+    <managerType typeId="8e8c9ba6-81c7-456e-94c4-3987940beeda" valueTypeId="9169c451-98a4-423d-be52-1a382ee5a0cd"/>
+    <valueManagerType typeId="31a1046b-7b41-4c50-8c97-b4c390523f43" valueTypeId="02ad8451-52eb-4a93-b98b-a684ca149fe1"/>
+    <valueKeyType typeId="256d45aa-cb94-4fcd-8d9c-c0768826ea19" valueTypeId="531703a3-4b24-468a-9985-43b342eaaea9"/>
+  </producedTypes>
+  <name>scmИспользоватьТелеграмБоты</name>
+  <synonym>
+    <key>ru</key>
+    <value>(scm) Использовать телеграм боты</value>
+  </synonym>
+  <type>
+    <types>Boolean</types>
+  </type>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

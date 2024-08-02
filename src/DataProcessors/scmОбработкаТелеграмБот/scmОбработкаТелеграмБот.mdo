@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cec01572-0d8a-408b-af9d-427932a940f5">
+  <producedTypes>
+    <objectType typeId="55800e70-8547-41a2-8d55-e31931484c85" valueTypeId="65f885da-33f3-4c19-9bc9-3bfc60efbb97"/>
+    <managerType typeId="bcf619db-8b85-4d99-af2e-ecf26e6eac24" valueTypeId="b9f8aa04-a7aa-480a-8bb4-d910aa105fa4"/>
+  </producedTypes>
+  <name>scmОбработкаТелеграмБот</name>
+  <synonym>
+    <key>ru</key>
+    <value>Телеграм бот</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.scmОбработкаТелеграмБот.Form.Форма</defaultForm>
+  <forms uuid="ac640b0b-d6d2-42e5-89ba-42bd474fafd4">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="2e770ae2-7955-4b3a-980c-e129669dbd55">
+    <name>XSLT_graphscheme</name>
+    <synonym>
+      <key>ru</key>
+      <value>XSLT graphscheme</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="73819d2e-f6bb-4061-92df-699dbc9edc16">
+    <name>ТаблицаСостояний</name>
+    <synonym>
+      <key>ru</key>
+      <value>Таблица состояний</value>
+    </synonym>
+  </templates>
+  <templates uuid="ecd7980a-550b-4aae-b424-fb67b1709225">
+    <name>ТаблицаПереходов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Таблица переходов</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

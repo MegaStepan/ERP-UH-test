@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d771ce45-30b4-4ce2-880c-781c61386f38">
+  <name>scmHTTPCервисыOpenAPI</name>
+  <synonym>
+    <key>ru</key>
+    <value>Scm HTTPCервисы open API</value>
+  </synonym>
+  <comment>Функции возвращающие данные для представлений</comment>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <serverCall>true</serverCall>
+</mdclass:CommonModule>

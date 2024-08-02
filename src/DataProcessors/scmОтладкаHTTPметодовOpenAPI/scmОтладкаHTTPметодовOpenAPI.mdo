@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="791dc1a2-c58f-4dd0-8823-9621ee38deb9">
+  <producedTypes>
+    <objectType typeId="6d1bca97-fdfa-41da-aa37-84dd91243ac5" valueTypeId="02833a9a-b89c-4c6a-b84d-cf956e149cc8"/>
+    <managerType typeId="7547a6af-698f-41d4-8f02-c3be94cf15d3" valueTypeId="c148bb9b-d335-4d2d-b678-042b15498522"/>
+  </producedTypes>
+  <name>scmОтладкаHTTPметодовOpenAPI</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отладка HTTP методов open API</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.scmОтладкаHTTPметодовOpenAPI.Form.Форма</defaultForm>
+  <explanation>
+    <key>ru</key>
+    <value>Позволяет отлаживать входящие запросы без web-сервера. Как Postman, только внутри 1С</value>
+  </explanation>
+  <forms uuid="cefb29fc-53df-4af1-84c0-9ac6983f0e3b">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

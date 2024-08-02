@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="288a1023-9faa-4951-b583-3ff76df2648b">
+  <name>scmOpenAPI</name>
+  <synonym>
+    <key>ru</key>
+    <value>Scm open API</value>
+  </synonym>
+  <rootURL>OpenAPI</rootURL>
+  <sessionMaxAge>5</sessionMaxAge>
+  <urlTemplates uuid="03edc497-69cd-49d8-8df9-4445774b9f70">
+    <name>schema</name>
+    <synonym>
+      <key>ru</key>
+      <value>Schema</value>
+    </synonym>
+    <template>/schema/*</template>
+    <methods uuid="62c082a6-57bc-4af7-a964-c8a7cbd42e90">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>schemaGET</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="b39962ba-45f9-4458-8dba-80565733935f">
+    <name>mobile</name>
+    <synonym>
+      <key>ru</key>
+      <value>Mobile</value>
+    </synonym>
+    <comment>обмены с SO2 через шину ESB</comment>
+    <template>/mobile/{method}</template>
+    <methods uuid="2646256d-521c-43b0-93f4-99f7fc805f0d">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>mobileGET</handler>
+    </methods>
+    <methods uuid="2f720fb4-00d9-40f5-8356-532f54120d8d">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>mobilePost</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="84edf825-42c9-46a0-9884-60ca7d7b01ea">
+    <name>prices</name>
+    <synonym>
+      <key>ru</key>
+      <value>Prices</value>
+    </synonym>
+    <comment>Прайс лист</comment>
+    <template>/prices/{method}</template>
+    <methods uuid="f1b5d9da-ea92-4adf-9773-4815e6674d71">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>pricesPOST</handler>
+    </methods>
+    <methods uuid="e9e23ce0-b709-4493-8b2b-3652dd326858">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>pricesGET</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="3b140aff-1cb8-4e8a-8338-998cf9111664">
+    <name>print</name>
+    <synonym>
+      <key>ru</key>
+      <value>Print</value>
+    </synonym>
+    <template>/print</template>
+    <methods uuid="fc035ca1-d7d9-4ddb-9a14-ee161a26e99f">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>printGET</handler>
+    </methods>
+    <methods uuid="68a8feba-a346-4be2-b65e-3eb1b384b429">
+      <name>PUT</name>
+      <synonym>
+        <key>ru</key>
+        <value>PUT</value>
+      </synonym>
+      <httpMethod>PUT</httpMethod>
+      <handler>printPUT</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

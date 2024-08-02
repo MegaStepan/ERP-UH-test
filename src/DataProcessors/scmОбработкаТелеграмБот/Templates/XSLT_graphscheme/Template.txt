@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+    xmlns:x1c="http://v8.1c.ru/8.1/data/core"
+    version="1.0">
+    
+    <xsl:output indent="yes" encoding="UTF-8" method="xml" version="1.0"/>
+    
+    <!-- Шаблон необходим для преобразования исходных данных в XDTO графической схемы -->
+    <xsl:template match="/">
+        
+        <FlowchartContextType xmlns="http://v8.1c.ru/8.2/data/graphscheme" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <backColor xmlns:d2p1="http://v8.1c.ru/8.1/data/ui/style">d2p1:FieldBackColor</backColor>
+            <enableGrid>
+                <xsl:value-of select="x1c:Structure/x1c:Property[@name = 'ОтображатьСетку']/x1c:Value/text()"/>
+            </enableGrid>
+            <drawGridMode>Lines</drawGridMode>
+            <gridHorizontalStep>20</gridHorizontalStep>
+            <gridVerticalStep>20</gridVerticalStep>
+            <bpUUID>00000000-0000-0000-0000-000000000000</bpUUID>
+            <useOutput>Auto</useOutput>
+            <printPropItem/>
+            
+            <xsl:for-each select="x1c:Structure/x1c:Property[@name = 'Элементы']/*/x1c:Value">
+                <xsl:variable name="itemType">
+                    <xsl:call-template name="StringTypeToInt">
+                        <xsl:with-param name="Type" select="x1c:Property[@name = 'Тип']/x1c:Value/text()"/>
+                    </xsl:call-template>   
+                </xsl:variable>
+                <xsl:variable name="Top">
+                    <xsl:value-of select="x1c:Property[@name = 'Координаты']/x1c:Value/x1c:Property[@name = 'Верх']/x1c:Value/text()"/>
+                </xsl:variable>
+                <xsl:variable name="Left">
+                    <xsl:value-of select="x1c:Property[@name = 'Координаты']/x1c:Value/x1c:Property[@name = 'Лево']/x1c:Value/text()"/>
+                </xsl:variable>
+                <xsl:variable name="Width">
+                    <xsl:value-of select="x1c:Property[@name = 'Размер']/x1c:Value/x1c:Property[@name = 'Ширина']/x1c:Value/text()"/>
+                </xsl:variable>
+                <xsl:variable name="Height">
+                    <xsl:value-of select="x1c:Property[@name = 'Размер']/x1c:Value/x1c:Property[@name = 'Высота']/x1c:Value/text()"/>
+                </xsl:variable>
+                
+                <item>
+                    <itemType>
+                        <xsl:value-of select="$itemType"/>
+                    </itemType>
+                    <itemId>
+                        <xsl:value-of select="x1c:Property[@name = 'Индекс']/x1c:Value/text()"/>
+                    </itemId>
+                    <currentLanguage>#</currentLanguage>
+                    <itemTitle>
+                        <item xmlns="http://v8.1c.ru/8.1/data/core">
+                            <lang>#</lang>
+                            <content>
+                                <xsl:value-of select="x1c:Property[@name = 'Заголовок']/x1c:Value/text()"/>
+                            </content>
+                        </item>
+                    </itemTitle>
+                    <tipText/>
+                    <itemCode>
+                        <xsl:value-of select="x1c:Property[@name = 'Имя']/x1c:Value/text()"/>
+                    </itemCode>
+                    <itemTabOrder/>
+                    <backColor>auto</backColor>
+                    <textColor xmlns:d3p1="http://v8.1c.ru/8.1/data/ui/style">d3p1:FormTextColor</textColor>
+                    <lineColor xmlns:d3p1="http://v8.1c.ru/8.1/data/ui/style">d3p1:BorderColor</lineColor>
+                    <groupNum>0</groupNum>
+                    <zOrder>2</zOrder>
+                    <hyperlink>false</hyperlink>
+                    <transparent>false</transparent>
+                    <textFont kind="AutoFont"/>
+                    <alignHor>Center</alignHor>
+                    <alignVer>Center</alignVer>
+                    <picturePlacement>Left</picturePlacement>
+                    <!-- все кроме линий -->
+                    <xsl:if test="$itemType != 1">
+                        <rectLeft>
+                            <xsl:value-of select="$Left"/> 
+                        </rectLeft>
+                        <rectRight>
+                            <xsl:value-of select="$Left + $Width"/>
+                        </rectRight>
+                        <rectTop>
+                            <xsl:value-of select="$Top"/>
+                        </rectTop>
+                        <rectBottom>
+                            <xsl:value-of select="$Top + $Height"/> 
+                        </rectBottom>
+                    </xsl:if>
+                    
+                    <xsl:if test="not(x1c:Property[@name = 'Точки'])">
+                        <xsl:comment>Левый верхний</xsl:comment>
+                        <point>
+                            <x><xsl:value-of select="$Left"/></x>
+                            <y><xsl:value-of select="$Top"/></y>
+                        </point>
+                        
+                        <xsl:comment>Правый верхний</xsl:comment>
+                        <point>
+                            <x><xsl:value-of select="$Left + $Width"/></x>
+                            <y><xsl:value-of select="$Top"/></y>
+                        </point>
+                        
+                        <xsl:comment>Правый нижний</xsl:comment>
+                        <point>
+                            <x><xsl:value-of select="$Left + $Width"/></x>
+                            <y><xsl:value-of select="$Top + $Height"/></y>
+                        </point>
+                        
+                        <xsl:comment>Левый нижний</xsl:comment>
+                        <point>
+                            <x><xsl:value-of select="$Left"/></x>
+                            <y><xsl:value-of select="$Top + $Height"/></y>
+                        </point>
+                    </xsl:if>
+                    <xsl:if test="x1c:Property[@name = 'Точки']">
+                        <xsl:for-each select="x1c:Property[@name = 'Точки']/*/x1c:Value">
+                            <point>
+                                <x>
+                                    <xsl:value-of select="x1c:Property[@name = 'x']/x1c:Value/text()"/>
+                                </x>
+                                <y>
+                                    <xsl:value-of select="x1c:Property[@name = 'y']/x1c:Value/text()"/>
+                                </y>
+                            </point>   
+                        </xsl:for-each>    
+                    </xsl:if>
+                    
+                    <border width="1" gap="false">
+                        <style xmlns="http://v8.1c.ru/8.1/data/ui" xmlns:d4p1="http://v8.1c.ru/8.2/data/graphscheme" xsi:type="d4p1:ConnectorLineType">Solid</style>
+                    </border>
+                    <picture/>
+                    <pictureStyle>4</pictureStyle>
+                    <pointUUID>00000000-0000-0000-0000-000000000000</pointUUID>
+                    <passageState>0</passageState>
+                    <tableCode>0</tableCode>
+                    <taskDescription>
+                        <xsl:value-of select="x1c:Property[@name = 'Имя']/x1c:Value/text()"/>
+                    </taskDescription>
+                    <!-- Только для декорации -->
+                    <xsl:if test="$itemType = 5"> 
+                        <explanation>
+                            <xsl:value-of select="x1c:Property[@name = 'Пояснение']/x1c:Value/text()"/>
+                        </explanation>
+                    </xsl:if>
+                    <groupAddressing>false</groupAddressing>
+                    <isAddrZoneDivideValid>true</isAddrZoneDivideValid>
+                    <addrZoneDivideYPos>16</addrZoneDivideYPos>
+                    
+                    <!-- Только для линии -->
+                    <xsl:if test="$itemType = 1"> 
+                        <connectFromItemId>
+                            <xsl:value-of select="x1c:Property[@name = 'Соединение']/x1c:Value/x1c:Property[@name = 'Источник']/x1c:Value/text()"/>
+                        </connectFromItemId>
+                        <connectFromPortIndex>0</connectFromPortIndex>
+                        <connectToItemId>
+                            <xsl:value-of select="x1c:Property[@name = 'Соединение']/x1c:Value/x1c:Property[@name = 'Назначение']/x1c:Value/text()"/>
+                        </connectToItemId>
+                        <decorativeLine>false</decorativeLine>
+                        <!-- portIndexFrom, portIndexTo - указание через какую точку прокладывать линию -->
+                        <!-- отсчет начинается с левой стороны и по часовой стрелке -->
+                        <portIndexFrom>
+                            <xsl:value-of select="x1c:Property[@name = 'Порты']/x1c:Value/x1c:Property[@name = 'Источник']/x1c:Value/text()"/>
+                        </portIndexFrom>
+                        <portIndexTo>
+                            <xsl:value-of select="x1c:Property[@name = 'Порты']/x1c:Value/x1c:Property[@name = 'Назначение']/x1c:Value/text()"/>
+                        </portIndexTo>
+                        <textPos>FirstSegment</textPos>
+                        <beginArrowStyle>None</beginArrowStyle>
+                        <endArrowStyle>Filled</endArrowStyle>
+                    </xsl:if>   
+                    
+                    <xsl:for-each select="x1c:Property[@name = 'Варианты']/x1c:Value/*">
+                        <transition>
+                            <name>
+                                <xsl:value-of select="x1c:Property[@name = 'Имя']/x1c:Value/text()"/>
+                            </name>
+                            <description>
+                                <item xmlns="http://v8.1c.ru/8.1/data/core">
+                                    <lang>#</lang>
+                                    <content>
+                                        <xsl:value-of select="x1c:Property[@name = 'Заголовок']/x1c:Value/text()"/>
+                                    </content>
+                                </item>
+                            </description>
+                            <backColor>auto</backColor>    
+                        </transition>
+                    </xsl:for-each>
+                </item>  
+                
+            </xsl:for-each>
+            
+            
+        </FlowchartContextType>
+    </xsl:template>
+    
+    <xsl:template name="StringTypeToInt">
+        <xsl:param name="Type"/>
+        <xsl:choose>
+            <xsl:when test="$Type = 'Старт'">
+                <xsl:value-of select="2"/>
+            </xsl:when>
+            <xsl:when test="$Type = 'Действие'">
+                <xsl:value-of select="5"/>
+            </xsl:when>
+            <xsl:when test="$Type = 'Линия'">
+                <xsl:value-of select="1"/>
+            </xsl:when>
+            <xsl:when test="$Type = 'Условие'">
+                <xsl:value-of select="4"/>
+            </xsl:when>
+            <xsl:when test="$Type = 'ВложенныйПроцесс'">
+                <xsl:value-of select="10"/>
+            </xsl:when>
+            <xsl:when test="$Type = 'ВыборВарианта'">
+                <xsl:value-of select="6"/>
+            </xsl:when>
+        </xsl:choose>
+        
+    </xsl:template>
+</xsl:stylesheet>

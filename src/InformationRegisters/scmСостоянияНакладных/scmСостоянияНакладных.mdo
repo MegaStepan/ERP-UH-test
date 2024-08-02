@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="329164b1-319c-497f-96a2-72fa360a442f">
+  <producedTypes>
+    <selectionType typeId="7fcce896-bc42-40ee-bc92-d3270f129c73" valueTypeId="cee676a0-fdf5-4739-9b15-e28464cb9c73"/>
+    <listType typeId="96301cd5-4895-40a8-a68e-b43a9b97c774" valueTypeId="6b23080d-6ba7-494f-b323-80763bfbf1a7"/>
+    <managerType typeId="ca6584d3-8946-45c4-9687-0261d7b8e5b5" valueTypeId="2d594777-8277-47bf-97e4-f739571c0dae"/>
+    <recordSetType typeId="b63dc4dc-eda5-491d-b50f-81f4d4eceaea" valueTypeId="1e3c5fa3-7763-4add-9687-e217f128d8f7"/>
+    <recordKeyType typeId="4b8e880c-284a-4e8a-80ca-f81bc7305698" valueTypeId="85ab3025-b4de-48ad-97c3-fe5c79d868ab"/>
+    <recordType typeId="6b14fbe6-edba-48d5-bc31-ca8d06c2fde8" valueTypeId="7a34c29d-fbaf-4612-a5db-7a47e079c875"/>
+    <recordManagerType typeId="e595731a-b55f-4805-a5a0-0ef86002ee49" valueTypeId="3dd56d8f-5f53-4d4b-ab23-c2334e44dddd"/>
+  </producedTypes>
+  <name>scmСостоянияНакладных</name>
+  <synonym>
+    <key>ru</key>
+    <value>scm Состояния накладных</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <listPresentation>
+    <key>ru</key>
+    <value>Статус</value>
+  </listPresentation>
+  <resources uuid="e28b9591-31f3-40f1-a6ff-b681d34ed30a">
+    <name>Состояние</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СостояниеНакладной</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="babc19d8-d7da-4443-b9e4-49487ba9befe">
+    <name>Источник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Источник</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>64</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <dimensions uuid="8be90bc7-ab37-4692-a33e-feeb394872d3">
+    <name>Накладная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Накладная</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.scmНакладныеНаВыполнениеРабот</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>
