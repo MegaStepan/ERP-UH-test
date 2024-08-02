@@ -5,7 +5,7 @@
     <key>ru</key>
     <value>Scm HTTPCервисы open APIПовт исп</value>
   </synonym>
-  <comment>Описание представлений интерфейса</comment>
+  <comment>Описание представлений интерфейсаsss</comment>
   <server>true</server>
   <externalConnection>true</externalConnection>
 </mdclass:CommonModule>
