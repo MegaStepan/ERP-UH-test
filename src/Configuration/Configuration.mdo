@@ -77,6 +77,7 @@
   <constants>Constant.ИзвлекатьТекстыФайловНаСервере</constants>
   <constants>Constant.СпособХраненияФайлов</constants>
   <constants>Constant.ПараметрыХраненияФайловВИБ</constants>
+  <constants>Constant.Константа</constants>
   <catalogs>Catalog.scmВнешниеСервисы_ПараметрыСоединения</catalogs>
   <catalogs>Catalog.scmНакладныеНаВыполнениеРаботПрисоединенныеФайлы</catalogs>
   <catalogs>Catalog.Номенклатура</catalogs>
