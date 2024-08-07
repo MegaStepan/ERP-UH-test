@@ -10,6 +10,7 @@
     <key>ru</key>
     <value>(scm) Использовать телеграм боты</value>
   </synonym>
+  <comment>aaaaa</comment>
   <type>
     <types>Boolean</types>
   </type>
