@@ -124,10 +124,10 @@
     <dataHistory>Use</dataHistory>
   </attributes>
   <attributes uuid="cf392ecb-784e-4642-9806-75584f01856a">
-    <name>Реквизит</name>
+    <name>Реквизит2</name>
     <synonym>
       <key>ru</key>
-      <value>Реквизит</value>
+      <value>Реквизит2</value>
     </synonym>
     <type>
       <types>String</types>
