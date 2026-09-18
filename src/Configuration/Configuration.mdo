@@ -87,6 +87,7 @@
   <documents>Document.scmНакладныеНаВыполнениеРабот</documents>
   <enums>Enum.СостояниеНакладной</enums>
   <enums>Enum.ТипыХраненияФайлов</enums>
+  <reports>Report.НТ_КонсольЗапросовMDMВнешнихИБ</reports>
   <dataProcessors>DataProcessor.scmОтладкаHTTPметодовOpenAPI</dataProcessors>
   <dataProcessors>DataProcessor.scmОбработкаТелеграмБот</dataProcessors>
   <informationRegisters>InformationRegister.ДвоичныеДанныеФайлов</informationRegisters>
