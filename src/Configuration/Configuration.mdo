@@ -88,6 +88,7 @@
   <enums>Enum.СостояниеНакладной</enums>
   <enums>Enum.ТипыХраненияФайлов</enums>
   <reports>Report.НТ_КонсольЗапросовMDMВнешнихИБ</reports>
+  <reports>Report.НТ_СверкаКлючевыхРеквизитовМеждуВнешнимиБазами</reports>
   <dataProcessors>DataProcessor.scmОтладкаHTTPметодовOpenAPI</dataProcessors>
   <dataProcessors>DataProcessor.scmОбработкаТелеграмБот</dataProcessors>
   <informationRegisters>InformationRegister.ДвоичныеДанныеФайлов</informationRegisters>
