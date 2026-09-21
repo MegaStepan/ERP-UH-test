@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="acdf52ea-33e3-4897-9920-74e1e344581a">
+  <producedTypes>
+    <objectType typeId="89a4d500-855a-482f-93d8-f53f7cfe4efc" valueTypeId="cf8f2d06-ee03-4b1f-87f8-9771fe59a24d"/>
+    <managerType typeId="b5551582-45c7-4657-b394-ac718085ab73" valueTypeId="8e99448f-b71b-4c81-9d44-7756c1137557"/>
+  </producedTypes>
+  <name>НТ_СверкаКлючевыхРеквизитовМеждуВнешнимиБазами</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сверка ключевых реквизитов справочников между внешними базами</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.НТ_СверкаКлючевыхРеквизитовМеждуВнешнимиБазами.Form.ФормаОтчета</defaultForm>
+  <forms uuid="8042a040-1ec3-4bb0-aa1e-2d4ac9439bbb">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="02a051b1-3eba-46df-bb55-c0aeb0e2acdb">
+    <name>Макет</name>
+  </templates>
+  <templates uuid="a46ed17c-0b4b-463a-bb0b-42cc90ff73a8">
+    <name>Правила_ДоговорыКонтрагентов_Бухгалтерия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Правила договоры контрагентов бухгалтерия</value>
+    </synonym>
+  </templates>
+  <templates uuid="42228b9b-e55c-4225-9600-91a8c4dd8eae">
+    <name>Правила_ДоговорыКонтрагентов_Документооборот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Правила договоры контрагентов документооборот</value>
+    </synonym>
+  </templates>
+  <templates uuid="dae814ea-78f2-473b-a5bc-4048906c4d99">
+    <name>Правила_Пользователи_Бухгалтерия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Правила пользователи бухгалтерия</value>
+    </synonym>
+  </templates>
+  <templates uuid="bff5daf3-d67f-468b-80b1-9bc85faccfcb">
+    <name>Правила_Пользователи_Документооборот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Правила пользователи документооборот</value>
+    </synonym>
+  </templates>
+  <templates uuid="6fd6576b-09a8-47b9-aef6-d72f1bcccc54">
+    <name>Правила_Пользователи_ЕРП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Правила пользователи ЕРП</value>
+    </synonym>
+  </templates>
+  <templates uuid="394f40e0-63d8-4ba2-9572-e6d6d1e3992f">
+    <name>Правила_Контрагенты_КлючевыеПоляИННКПП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Правила контрагенты ключевые поля ИННКПП</value>
+    </synonym>
+  </templates>
+</mdclass:Report>
